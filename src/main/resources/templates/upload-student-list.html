@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+
+<head>
+	<title>Attendance Home Page</title>
+	<meta charset="ISO-8859-1">
+</head>
+
+<body>
+	<div layout:fragment="content" class="container">
+
+		<div class="jumbotron">
+			<form class="form-horizontal" action="/upload" method="post" enctype="multipart/form-data">
+				<div class="form-group row ">
+					<div class="col-sm-6 mb-3 mb-sm">
+						<label class="custom-smile-form-label"><b>Select Month :</b></label><span
+							class="text-danger">*</span>
+						<select class="form-control" aria-label=".form-select-sm example" id="month" name="month"
+							required>
+							<option hidden value="0">Select Batch Month</option>
+							<option th:each="month: ${monthList}" th:value="${month}" th:text="${month}"></option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row ">
+					<div class="col-sm-6 mb-3 mb-sm">
+						<label class="custom-smile-form-label"><b>Year :</b></label><span class="text-danger">*</span>
+						<input type="text" class="form-control" id="year" placeholder="year" name="year" required />
+					</div>
+				</div>
+				<div class="form-group row ">
+					<div class="col-sm-6 mb-3 mb-sm">
+						<label class="custom-smile-form-label"><b>Choose File(Excel Sheet) :</b></label><span
+							class="text-danger">*</span>
+						<input class="form-control" type="file" name="file" id="file" reuqired />
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm" align="center">
+						<input type="submit" name="submit" value="Submit" class="btn btn-success" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</head>
+
+</html>

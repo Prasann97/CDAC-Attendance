@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+<body>
+	<div layout:fragment="content" class="container">
+
+		<div class="jumbotron">
+			<div th:with="bal1=0">
+				<table border="1" class="table table-responsive table-bordered table-striped" style="width: 100%">
+					<thead>
+						<tr>
+							<th>PRN Number</th>
+							<th>Student Name</th>
+							<th>Center Name</th>
+						</tr>
+					</thead>
+					<tbody id="tablebody">
+						<tr th:each="student : ${studentList}">
+							<td th:text="${student.prn}"></td>
+							<td th:text="${student.StudentName}"></td>
+							<td th:text="${student.centerName}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</head>
+
+</html>

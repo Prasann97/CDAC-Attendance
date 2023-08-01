@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+
+<head>
+	<title>Attendance Home Page</title>
+	<meta charset="ISO-8859-1">
+</head>
+
+<body>
+
+	<div layout:fragment="content" class="container">
+		<div class="jumbotron">
+			<form action="/mark-attendance" method="post">
+				<div class="form-group row ">
+					<div class="col-sm-6 mb-3 mb-sm">
+						<label class="custom-smile-form-label"><b>Select Subject :</b></label><span
+							class="text-danger">*</span>
+						<select class="form-control" id="subjectName" name="subjectName" required>
+							<option hidden value="0">Select Subject</option>
+							<option th:each="subject: ${subjectList}" th:value="${subject}" th:text="${subject}">
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm">
+						<label class="custom-smile-form-label"><b>Select Date :</b></label><span
+							class="text-danger">*</span>
+						<input class="form-control" type="date" name="date" required />
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm">
+						<label class="custom-smile-form-label"><b>Select Center :</b></label><span
+							class="text-danger">*</span>
+						<select class="form-control" id="centerName" name="centerName" required>
+							<option hidden value="0">Select Center</option>
+							<option th:each="center: ${centerList}" th:value="${center}" th:text="${center}"></option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm" align="center">
+						<input type="submit" value="Next" class="btn btn-success"/>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

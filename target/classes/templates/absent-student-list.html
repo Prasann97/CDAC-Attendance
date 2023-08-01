@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+
+<head>
+	<title>Attendance Home Page</title>
+	<meta charset="ISO-8859-1">
+</head>
+
+<body>
+	<div layout:fragment="content" class="container">
+
+		<div class="jumbotron">
+		
+			<div class="form-group blu-margin">
+				<b>Subject Name : </b><span name="subjectName" id="subjectName" th:text="${subjectName}" readonly />
+			</div>
+			<div class="form-group blu-margin">
+				<b>Attendance Date : </b><span name="attendanceDate" id="attendanceDate" th:text="${attendanceDate}"
+					readonly />
+			</div>
+
+			<div class="form-group blu-margin">
+				<b> Name :</b> <span name="centerName" id="centerName" th:text="${centerName}" readonly />
+			</div>
+
+			<table border="1" id="studentTable" class="table table-responsive table-bordered table-striped" style="width: 100%">
+				<thead>
+					<tr>
+						<th>PRN Number</th>
+						<th>Student Name</th>
+<!--						<th>Center Name</th>-->
+					</tr>
+				</thead>
+				<tbody></tbody>
+				<tbody>
+					<tr th:each="student : ${studentList}">
+						<td th:text="${student.student.prn}"></td>
+						<td th:text="${student.student.StudentName}"></td>
+<!--						<td th:text="${student.student.centerName}"></td>-->
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<link rel="stylesheet" type="text/css"
+		href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css"
+		href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables_themeroller.css">
+	<script type="text/javascript" charset="utf8"
+		src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" charset="utf8"
+		src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</body>
+
+</html>

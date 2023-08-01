@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<script th:src="@{/common-js/jquery.min.js}"></script>
+	<script th:src="@{/common-js/Chart.min.js}"></script>
+</head>
+
+<body>
+	<div layout:fragment="content" class="container">
+
+		<div class="jumbotron">
+			<form action="/save-attendance" method="post" th:object="${studentList}">
+				<div class="container">
+					<div class="form-group row ">
+						<div class="col-sm-6 mb-3 mb-sm">
+							<label class="custom-smile-form-label"><b>Subject Name :</b></label>
+							<span name="subjectName" id="subjectName" th:text="${subjectName}" />
+						</div>
+					</div>
+					<div class="form-group row ">
+						<div class="col-sm-6 mb-3 mb-sm">
+							<label class="custom-smile-form-label"><b>Attendance Date :</b></label>
+							<span name="attendanceDate" id="attendanceDate" th:text="${attendanceDate}" />
+						</div>
+					</div>
+
+					<div class="form-group row ">
+						<div class="col-sm-6 mb-3 mb-sm">
+							<label class="custom-smile-form-label"><b>Center Name :</b></label>
+							<span name="centerName" id="centerName" th:text="${centerName}" />
+						</div>
+					</div>
+					<div class="form-group row ">
+						<table border="1" id="studentTable" class="table table-responsive table-bordered table-striped"
+							style="width: 100%">
+							<thead>
+								<tr>
+									<th hidden>ID</th>
+									<th>PRN Number</th>
+									<th>Student Name</th>
+									<!--					<th>Attendance Date</th>-->
+									<!--					<th>Center Name</th>-->
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+							<tbody>
+								<tr th:each="student : ${studentMap}">
+									<td th:text="${student.key}" hidden></td>
+									<td th:text="${student.value.student.prn}"></td>
+									<td th:text="${student.value.student.StudentName}"></td>
+									<!--					<td th:text="${student.value.attendance.attendanceDate}"></td>-->
+									<!--					<td th:text="${student.value.student.centerName}"></td>-->
+									<td>
+										<input type="checkbox" th:id="checkbox+${student.key}" th:name="${student.key}"
+											th:value="${student.value.attendance.status}"
+											onchange="setvalue(this.name,this.id)"
+											th:checked="${student.value.attendance.status} ? 'checked'" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="text-center">
+					<button onclick="getObject()" class="btn btn-success">Submit</button>
+				</div>
+			</form>
+		</div>
+
+		<script type="text/javascript" th:inline="javascript">
+			var studentListObject = "";
+			var map = "";
+			$(document).ready(function () {
+				studentListObject = [[${studentList}]];
+				map = new Map();
+				studentListObject.forEach(obj => map.set(obj.prn, obj));
+				console.log(map);
+			});
+			var count = 0;
+
+			function setvalue(e, value) {
+				console.log(map);
+				console.log(e);
+				console.log(value);
+				if ($("#checkbox" + e)[0].checked) {
+					console.log(studentListObject[e].attendance.status);
+					studentListObject[e].attendance.status = true;
+					console.log(studentListObject[e].attendance);
+				}
+				else {
+					console.log(studentListObject[e].attendance.status);
+					studentListObject[e].attendance.status = false;
+					console.log(studentListObject[e].attendance);
+				}
+
+			}
+			function getObject() {
+				var jsonObject = JSON.stringify(studentListObject)
+				console.log(JSON.stringify(studentListObject))
+				$.ajax({
+					type: "post",
+					data: jsonObject,
+					contentType: 'application/json; charset=utf-8',
+					url: "/save-attendance",
+					dataType: "json",
+					success: function (result) {
+						$(element).append(result);
+					}
+				});
+			}
+		</script>
+		<th:block>
+			<link rel="stylesheet" type="text/css"
+				th:href="@{/common-css/jquery.dataTables.css}">
+			<link rel="stylesheet" type="text/css"
+				th:href="@{/common-css/jquery.dataTables_themeroller.css}">
+			<script type="text/javascript" charset="utf8"
+				th:src="@{/common-js/jquery-1.7.1.min.js}"></script>
+			<script type="text/javascript" charset="utf8"
+				th:src="@{/common-js/jquery.dataTables.min.js}"></script>
+		</th:block>
+	</div>
+	</div>
+</body>
+
+</html>
