@@ -15,7 +15,7 @@
 					<div class="col-sm-6 mb-3 mb-sm">
 						<label class="custom-smile-form-label"><b>Name :</b></label><span
 							class="text-danger">*</span>
-						<input class="form-control" id="name" name="name" type="text" placeholder="Enter Full Name">
+						<input class="form-control" id="name" name="name" type="text" placeholder="Enter Full Name" autocomplete="off" required>
 						<p class="text-danger" th:errors="*{name}" th:if="${#fields.hasErrors('name')}"></p>
 					</div>
 					</div>
@@ -23,7 +23,7 @@
 					<div class="col-sm-6 mb-3 mb-sm">
 						<label class="custom-smile-form-label"><b>Email :</b></label><span
 							class="text-danger">*</span>
-						<input class="form-control" id="email" name="email" type="email" placeholder="Enter Email Id">
+						<input class="form-control" id="email" name="email" type="email" placeholder="Enter Email Id" autocomplete="off" onfocus="this.removeAttribute('readonly');" required>
 						<p class="text-danger" th:errors="*{email}" th:if="${#fields.hasErrors('email')}"></p>
 					</div>
 					</div>
@@ -31,7 +31,7 @@
 					<div class="col-sm-6 mb-3 mb-sm">
 						<label class="custom-smile-form-label"><b>Password :</b></label><span
 							class="text-danger">*</span>
-						<input class="form-control" id="password" name="password" type="password" placeholder="Enter Password">
+						<input class="form-control" id="password" name="password" type="password" placeholder="Enter Password" autocomplete="off" onfocus="this.removeAttribute('readonly');" required>
 						<p class="text-danger" th:errors="*{password}" th:if="${#fields.hasErrors('password')}"></p>
 					</div>
 					</div>

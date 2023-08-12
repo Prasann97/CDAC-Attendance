@@ -1,4 +1,4 @@
-package com.cdac.attendance.dao;
+package com.cdac.attendance.service;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +22,7 @@ import com.cdac.attendance.model.StudentAttendance;
 import com.cdac.attendance.utility.ApplicationConstants;
 
 @Service
-public class StudentDaoImpl implements StudentDao{
+public class StudentService {
 
 	@Autowired
 	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
@@ -30,7 +30,6 @@ public class StudentDaoImpl implements StudentDao{
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	@Override
 	public List<StudentAttendance> getAllStudents() {
 		List<StudentAttendance> StudentAttendanceList=namedParameterJdbcTemplate.query("select * from student", new RowMapper<StudentAttendance>() {
 
@@ -84,7 +83,6 @@ public class StudentDaoImpl implements StudentDao{
 		return StudentAttendanceList;
 	}
 
-	@Override
 	public boolean saveAllStudnets(List<Student> studentList) {
 		jdbcTemplate.batchUpdate("INSERT INTO student (prn, student_name, center_name) VALUES (?, ?, ?)",
 				studentList, studentList.size(), (PreparedStatement ps, Student student) -> {
@@ -95,7 +93,6 @@ public class StudentDaoImpl implements StudentDao{
 		return false;
 	}
 
-	@Override
 	public List<StudentAttendance> getAllStudentsForAttendance(String subjectName, Date attendanceDate,String centerName) {
 		MapSqlParameterSource param = new MapSqlParameterSource();
 		param.addValue("centerName", centerName);

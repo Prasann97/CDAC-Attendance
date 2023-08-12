@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<script th:src="@{/common-js/jquery.min.js}"></script>
+	<script th:src="@{/common-js/Chart.min.js}"></script>
+</head>
+
+<body>
+	<div layout:fragment="content" class="container">
+		<div class="jumbotron">
+			<h2>Something went wrong! </h2>
+			<h3>Please Contact Administrator! </h3>
+		</div>
+		<th:block>
+			<link rel="stylesheet" type="text/css" th:href="@{/common-css/jquery.dataTables.css}">
+			<link rel="stylesheet" type="text/css" th:href="@{/common-css/jquery.dataTables_themeroller.css}">
+			<script type="text/javascript" charset="utf8" th:src="@{/common-js/jquery-1.7.1.min.js}"></script>
+			<script type="text/javascript" charset="utf8" th:src="@{/common-js/jquery.dataTables.min.js}"></script>
+		</th:block>
+	</div>
+	</div>
+</body>
+
+</html>

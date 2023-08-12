@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+
+<head>
+	<title>Attendance Home Page</title>
+	<meta charset="ISO-8859-1">
+</head>
+
+<body>
+
+	<div layout:fragment="content" class="container">
+		<div class="jumbotron">
+			<form action="/role-assign" method="post">
+				<div class="form-group row ">
+					<div class="col-sm-6 mb-3 mb-sm">
+						<label class="custom-smile-form-label"><b>Select Employee :</b></label><span
+							class="text-danger">*</span>
+						<select class="form-control" id="employeeId" name="employeeId" required>
+							<option hidden value="0">Select Employee</option>
+							<option th:each="employee: ${employeeList}" th:value="${employee.id}" th:text="${employee.name}">
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm">
+						<label class="custom-smile-form-label"><b>Select Role :</b></label><span
+							class="text-danger">*</span>
+						<select class="form-control" id="roleId" name="roleId" required>
+							<option hidden value="0">Select Role</option>
+							<option th:each="role: ${rolesList}" th:value="${role.id}" th:text="${role.name}"></option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6 mb-3 mb-sm" align="center">
+						<input type="submit" value="Submit" class="btn btn-success"/>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

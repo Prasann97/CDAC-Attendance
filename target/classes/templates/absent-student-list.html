@@ -10,7 +10,7 @@
 	<div layout:fragment="content" class="container">
 
 		<div class="jumbotron">
-		
+
 			<div class="form-group blu-margin">
 				<b>Subject Name : </b><span name="subjectName" id="subjectName" th:text="${subjectName}" readonly />
 			</div>
@@ -22,24 +22,29 @@
 			<div class="form-group blu-margin">
 				<b> Name :</b> <span name="centerName" id="centerName" th:text="${centerName}" readonly />
 			</div>
-
-			<table border="1" id="studentTable" class="table table-responsive table-bordered table-striped" style="width: 100%">
-				<thead>
-					<tr>
-						<th>PRN Number</th>
-						<th>Student Name</th>
-<!--						<th>Center Name</th>-->
-					</tr>
-				</thead>
-				<tbody></tbody>
-				<tbody>
-					<tr th:each="student : ${studentList}">
-						<td th:text="${student.student.prn}"></td>
-						<td th:text="${student.student.StudentName}"></td>
-<!--						<td th:text="${student.student.centerName}"></td>-->
-					</tr>
-				</tbody>
-			</table>
+			<div th:if="${attendanceRemark!=''}">
+				<h3 th:text="${attendanceRemark}"></h3>
+			</div>
+			<div th:if="${attendanceRemark==''}">
+				<table border="1" id="studentTable" class="table table-responsive table-bordered table-striped"
+					style="width: 100%">
+					<thead>
+						<tr>
+							<th>PRN Number</th>
+							<th>Student Name</th>
+							<!--						<th>Center Name</th>-->
+						</tr>
+					</thead>
+					<tbody></tbody>
+					<tbody>
+						<tr th:each="student : ${studentList}">
+							<td th:text="${student.student.prn}"></td>
+							<td th:text="${student.student.StudentName}"></td>
+							<!--						<td th:text="${student.student.centerName}"></td>-->
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 	<link rel="stylesheet" type="text/css"

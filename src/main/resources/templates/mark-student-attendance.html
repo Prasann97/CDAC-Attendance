@@ -107,7 +107,18 @@
 					url: "/save-attendance",
 					dataType: "json",
 					success: function (result) {
-						$(element).append(result);
+						swal({
+					        title: "Success",
+					        text: "Attendance Marked Successfully!",
+					        type: "success",
+					        showCancelButton: true,
+					        confirmButtonClass: 'btn-danger',
+					        confirmButtonText: 'Yes, delete it!',
+					        cancelButtonText: "No, cancel plx!",
+					        closeOnConfirm: false,
+					        closeOnCancel: false
+					        })
+					        window.location.href = "/home-page"
 					}
 				});
 			}
