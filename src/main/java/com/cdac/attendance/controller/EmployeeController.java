@@ -234,12 +234,15 @@ public class EmployeeController {
 
 	@PostMapping("save-attendance")
 	@ResponseBody
-	public ResponseEntity<String> saveAttendance(@RequestBody String studentListObject, Model model) {
+	public String saveAttendance(@RequestBody String studentListObject, Model model) {
 		try {
 //			System.err.println(studentListObject);
 			ObjectMapper mapper = new ObjectMapper();
 			List<StudentAttendance> studentAttendanceList = new ArrayList<>();
-			studentAttendanceList = Arrays.asList(mapper.readValue(studentListObject, StudentAttendance[].class));
+			try {
+				studentAttendanceList = Arrays.asList(mapper.readValue(studentListObject, StudentAttendance[].class));
+			} catch (Exception e) {
+			}
 
 //			System.err.println(studentAttendanceList);
 			List<Attendance> attendanceList = new ArrayList<Attendance>();
@@ -249,15 +252,11 @@ public class EmployeeController {
 			}
 
 			attendanceDao.saveAll(attendanceList);
-			return new ResponseEntity<String>("success",HttpStatus.OK);
-		} catch (JsonMappingException e) {
+			return "success";
+		} catch (Exception e) {
 			e.printStackTrace();
-			return new ResponseEntity<String>("Falied",HttpStatus.BAD_REQUEST);
-		} catch (JsonProcessingException e) {
-			e.printStackTrace();
-			return new ResponseEntity<String>("Falied",HttpStatus.BAD_REQUEST);
+			return "Falied";
 		}
-		
 	}
 	
 	@GetMapping("student-list")

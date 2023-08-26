@@ -11,7 +11,7 @@
 	<div layout:fragment="content" class="container">
 
 		<div class="jumbotron">
-			<form action="/save-attendance" method="post" th:object="${studentList}">
+			<!--<form method="post" th:object="${studentList}">-->
 				<div class="container">
 					<div class="form-group row ">
 						<div class="col-sm-6 mb-3 mb-sm">
@@ -67,7 +67,7 @@
 				<div class="text-center">
 					<button onclick="getObject()" class="btn btn-success">Submit</button>
 				</div>
-			</form>
+			<!--</form>-->
 		</div>
 
 		<script type="text/javascript" th:inline="javascript">
@@ -101,26 +101,26 @@
 				var jsonObject = JSON.stringify(studentListObject)
 				console.log(JSON.stringify(studentListObject))
 				$.ajax({
-					type: "post",
-					data: jsonObject,
-					contentType: 'application/json; charset=utf-8',
-					url: "/save-attendance",
+					type: "POST",
 					dataType: "json",
-					success: function (result) {
-						swal({
-					        title: "Success",
-					        text: "Attendance Marked Successfully!",
-					        type: "success",
-					        showCancelButton: true,
-					        confirmButtonClass: 'btn-danger',
-					        confirmButtonText: 'Yes, delete it!',
-					        cancelButtonText: "No, cancel plx!",
-					        closeOnConfirm: false,
-					        closeOnCancel: false
-					        })
-					        window.location.href = "/home-page"
-					}
+					contentType: 'application/json',
+					url: "/save-attendance",
+					data: jsonObject,
+					success: function(resp) {
+						alert("HI")
+					Swal.fire({
+						icon: 'success',
+						text: 'Attendance Marked Successfully'
+					}).then(function() {
+						alert("SUCCESS")
+						window.location = "/home-page";
+					});
+					},
+					error: function(resp) {
+						alert("ERROR")
+						}
 				});
+				window.location = "/home-page";
 			}
 		</script>
 		<th:block>
