@@ -74,7 +74,7 @@ public class AdminController {
 	@PostMapping("/role-assign")
     public String assignRoleToEmployee(@RequestParam("employeeId") Long employeeId,
 			@RequestParam("roleId") Long roleId,Model model) {
-		System.err.println(employeeId+" , "+roleId);
+//		System.err.println(employeeId+" , "+roleId);
 		roleServies.saveEmployeeRole(employeeId,roleId);
 		return "home-page";
     }

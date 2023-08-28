@@ -857,7 +857,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -885,7 +885,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -913,7 +913,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -941,7 +941,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -969,7 +969,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -997,7 +997,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1025,7 +1025,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1053,7 +1053,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1081,7 +1081,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1109,7 +1109,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1137,7 +1137,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1165,7 +1165,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1193,7 +1193,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1221,7 +1221,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1249,7 +1249,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1277,7 +1277,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1305,7 +1305,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1333,7 +1333,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				int presentCounter = 0;
 				int totalDaysCount = 0;
 				List<Attendance> filteredAttendanceList = filteredStudentAttendanceList.get(i)
@@ -1361,7 +1361,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getTotalStudentwiseAttendance().get(ApplicationConstants.CPOS), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getTotalStudentwiseAttendance().get(ApplicationConstants.OOPJ), style, sheet);
@@ -1385,7 +1385,7 @@ public class ExcelGenerator {
 				createCell(row, columnCount++, count++, style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getPrn(), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getStudent().getStudentName(), style, sheet);
-				System.err.println(filteredStudentAttendanceList.get(i));
+//				System.err.println(filteredStudentAttendanceList.get(i));
 				
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getTotalStudentwiseAttendance().get(ApplicationConstants.CPOS), style, sheet);
 				createCell(row, columnCount++, filteredStudentAttendanceList.get(i).getTotalStudentwiseAttendance().get(ApplicationConstants.OOPJ), style, sheet);
