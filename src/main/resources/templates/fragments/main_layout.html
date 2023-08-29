@@ -1,7 +1,46 @@
 <!DOCTYPE html>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
-    <head>
-<!--		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<head>
+	
+	<style>
+		/*Dropdown Css Start*/
+		.dropdown {
+			position: relative;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: fixed;
+			background-color: rgb(0, 0, 0);
+			box-shadow: 0 2px 5px rgb(0, 0, 0);
+			list-style: none;
+			padding: 10px;
+			margin-top: 10px;
+			border-radius: 5px;
+			z-index: 999;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+			animation: fadeIn 0.3s ease-in-out;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(-10px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		/*Dropdown Css End*/
+	</style>
+	
+	<!--		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
  Call App Mode on ios devices 
@@ -10,21 +49,34 @@
 <meta name="msapplication-tap-highlight" content="no">
 <meta name="_csrf" th:content="${_csrf.token}"/>
 <meta name="_csrf_header" th:content="${_csrf.headerName}"/>-->
-      <script th:src="@{/common-js/jquery-1.10.2.js}"></script>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" th:href="@{/common-css/bootstrap.min.css}">
-        <!-- Optional theme -->
-        <link rel="stylesheet" th:href="@{/common-css/bootstrap-theme.min.css}">
-        <!-- Latest compiled and minified JavaScript -->
-        <script th:src="@{/common-js/bootstrap.min.js}"></script>
-              
-    </head>
-    <body>
-    <!--header.html  that's here  -->
-        <div th:replace="~{fragments/header :: header}"></div>
-    
-        <div layout:fragment="content"></div>
-    <!--footer.html  that's here  -->
-        <div th:replace="~{fragments/footer :: footer}"></div>
-    </body>
+	<script th:src="@{/common-js/jquery-1.10.2.js}"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" th:href="@{/common-css/bootstrap.min.css}">
+	<!-- Optional theme -->
+	<link rel="stylesheet" th:href="@{/common-css/bootstrap-theme.min.css}">
+	<link rel="stylesheet" th:href="@{/common-css/loader.css}">
+	<!-- Latest compiled and minified JavaScript -->
+	<script th:src="@{/common-js/bootstrap.min.js}"></script>
+	<script th:src="@{/common-js/loader.js}"></script>
+
+</head>
+
+<body style="background-color: rgb(46, 46, 46);">
+	<!--header.html  that's here  -->
+	<div th:replace="~{fragments/header :: header}"></div>
+
+	<div layout:fragment="content" id="content"></div>
+
+	<div class="bg-loader-0209r" id="loaderImage">
+		<div class="loader">
+			<div class="inner one"></div>
+			<div class="inner two"></div>
+			<div class="inner three"></div>
+			<p style="color: rgb(0, 0, 255);">Loading...</p>
+		</div>
+	</div>
+
+	<!--footer.html  that's here  -->
+	<div th:replace="~{fragments/footer :: footer}" class="footer"></div>
+</body>
 </html>

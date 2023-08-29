@@ -6167,8 +6167,8 @@ a.badge:hover {
 
 .jumbotron {
 	padding-top: 30px;
-	padding-bottom: 30px;
-	margin-bottom: 30px;
+	padding-bottom: 60px;
+	margin-bottom: 100px;
 	color: inherit;
 	background-color: #eee
 }

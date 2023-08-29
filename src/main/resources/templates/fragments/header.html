@@ -10,9 +10,9 @@
 				<li sec:authorize="isAuthenticated()"><a th:href="@{/upload-student-sheet}">Upload Student List</a></li>
 				<!--      <li><a th:href="@{/upload-student-sheet}">Mark Attendance</a></li>-->
 				<li class="dropdown"><!--sec:authorize="hasAnyAuthority('CREATOR')"-->
-					<a class="dropdown-toggle" data-toggle="dropdown" href="">Attendance
+					<a href="">Attendance
 						<span class="caret"></span></a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-content dropdown-menu">
 						<li><a th:href="@{/student-list}">Student List</a></li>
 						<li><a th:href="@{/attendance-home-page}">Mark Attendance</a></li>
 						<li><a th:href="@{/search-absent-students}">Date Wise Absent Student List</a></li>
@@ -20,9 +20,9 @@
 					</ul>
 				</li>
 				<li class="dropdown"><!--sec:authorize="hasAnyAuthority('CREATOR')"-->
-					<a class="dropdown-toggle" data-toggle="dropdown" href="">Administrator
+					<a href="">Administrator
 						<span class="caret"></span></a>
-					<ul class="dropdown-menu">
+					<ul class="dropdown-content dropdown-menu">
 						<li><a th:href="@{/registration}">Register</a></li>
 						<li><a th:href="@{/role-assign}">Assign Role</a></li>
 					</ul>

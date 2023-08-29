@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public DaoAuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
 		authProvider.setUserDetailsService(userDetailsService());
-		System.err.println(passwordEncoder());
+//		System.err.println(passwordEncoder());
 		authProvider.setPasswordEncoder(passwordEncoder());
 
 		return authProvider;
@@ -59,6 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.anyRequest().authenticated()
 				.and()
 				.formLogin()
+//				 .loginPage("/login")
 				.permitAll()
 				.and()
 				.logout()
