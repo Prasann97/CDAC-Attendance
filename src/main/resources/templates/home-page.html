@@ -4,16 +4,25 @@
 <head>
 	<title>Attendance Home Page</title>
 	<meta charset="ISO-8859-1">
+	<style>
+		.success-box {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+	</style>
 </head>
 
 <body>
 	<div layout:fragment="content" class="container">
-
+		<div th:if="${successMessage}" class="success-message success-box">
+			<p th:text="${successMessage}"></p>
+		</div>
 		<div class="jumbotron">
 			Welcome To CDAC-Mumbai Attendance Management System
 		</div>
 	</div>
 </body>
-</head>
-
 </html>

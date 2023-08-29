@@ -59,7 +59,8 @@ public class AdminController {
         }
 
         employeeService.saveUser(employeeDto);
-        return "redirect:/registration?success";
+        model.addAttribute("successMessage", "Registration successful.");
+        return "home-page";
     }
 	
 	@GetMapping("/role-assign")
